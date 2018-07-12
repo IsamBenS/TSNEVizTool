@@ -1,0 +1,10 @@
+Package: TSNEVizTool
+Type: Package
+Title: t-SNE Visualization Tool
+Version: 0.8.0
+Author: Isam Ben Soltane
+Maintainer: Isam Ben Soltane <isam.ben-soltane@inserm.fr>
+Description: Tool presenting the results from different runs of the Rtsne function for variables parameters on a generated FCS file.
+License: ?
+Encoding: UTF-8
+LazyData: true
