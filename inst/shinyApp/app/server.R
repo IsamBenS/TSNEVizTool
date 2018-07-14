@@ -128,7 +128,7 @@ server <- function(input, output, session)
          theta <<- c(0.2,0.5,0.6,0.8)
          perplex <<- c(50,100,150,200)
          updateSliderInput(session, "param", "Markers:", min = 1, max = 3, value = 1)
-         updateSliderInput(session, "theta", "Theta (0.2,0.5,1)", min = 1, max = 3, value = 1)
+         updateSliderInput(session, "theta", "Theta", min = 1, max = 4, value = 1)
          updateSliderInput(session, "iterations", "Iterations:", min = 1, max = 3, value = 1)
          updateSliderInput(session, "perplexity", "Perplexity :", min = 1, max = 4, value = 1)
 
