@@ -24,7 +24,7 @@ ui <- dashboardPage(
     dashboardBody
     (
         #tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")),
-        tags$head(includeScript(paste0(system.file("shinyApp", "app", package = "TSNEVizTool"),'/slider.js')),
+        tags$head(includeScript(paste0(system.file("shinyApp", "app", package = "TSNEVizTool"),'/slider.js'))),
         fluidRow
         (
             id="main_content",
