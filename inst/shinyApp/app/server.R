@@ -133,16 +133,16 @@ server <- function(input, output, session)
          updateSliderInput(session, "iterations", "Iterations:", min = 1, max = 3, value = 1)
          updateSliderInput(session, "perplexity", "Perplexity :", min = 1, max = 4, value = 1)
 
-		 output$resPlot <- renderUI(
-		 {
-			 fname <- paste("https://simulworld.fr/temp/ev-",input$events,
-                                             "__pm-",param[input$param],
-                                             "__perpl-",perplex[input$perplexity],
-                                             "__iter-",iter[input$iterations],
-                                             "__theta-",theta[input$theta],
-                                             ".png")
-											 
-			 tags$img(src=fname, width="100%")
-		 })
+      	 output$resPlot <- renderUI(
+      	 {
+      		 fname <- paste("https://simulworld.fr/temp/ev-",input$events,
+                                                 "__pm-",param[input$param],
+                                                 "__perpl-",perplex[input$perplexity],
+                                                 "__iter-",iter[input$iterations],
+                                                 "__theta-",theta[input$theta],
+                                                 ".png")
+      										 
+      		 tags$img(src=fname, width="100%")
+      	 })
      })
 }
