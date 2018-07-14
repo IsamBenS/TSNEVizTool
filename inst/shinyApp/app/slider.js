@@ -16,7 +16,7 @@ $(function()
   
   function thetaSlider(curr_val) 
   {
-    avail_values = [0.2,0.5,0.6,0.8]
+    avail_values = [0.2,0.5,0.6,1]
     return avail_values[curr_val-1];
   }
   
