@@ -26,3 +26,4 @@ TSNE.Viz.run <- function()
 
     shiny::runApp(appDir, display.mode = "normal", launch.browser = T)
 }
+ 

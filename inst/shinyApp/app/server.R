@@ -16,16 +16,16 @@ server <- function(input, output, session)
          {
              times <- sapply(param, function(i)
              {
-                 tx <- tempfile(fileext = ".dat")
-                 download.file(paste("http://simulworld.fr/temp/ev-",input$events,
-                                     "__pm-",i,
-                                     "__perpl-",perplex[input$perplexity],
-                                     "__iter-",iter[input$iterations],
-                                     "__theta-",theta[input$theta],
-                                     "time.dat"),
-                               tx,
-                               "auto",quiet = T)
+                 appDir <- system.file("shinyApp", "app", package = "TSNEVizTool")
+                 tx <- paste0(appDir,"/times/ev-")
+                 tx <- paste(tx,input$events,
+                             "__pm-",i,
+                             "__perpl-",perplex[input$perplexity],
+                             "__iter-",iter[input$iterations],
+                             "__theta-",theta[input$theta],
+                             "time.dat")
                  load(tx)
+                 
 
                  return(execTime/60)
              })
@@ -45,15 +45,14 @@ server <- function(input, output, session)
          {
              times <- sapply(iter, function(i)
              {
-                 tx <- tempfile(fileext = ".dat")
-                 download.file(paste("http://simulworld.fr/temp/ev-",input$events,
-                                     "__pm-",param[input$param],
-                                     "__perpl-",perplex[input$perplexity],
-                                     "__iter-",i,
-                                     "__theta-",theta[input$theta],
-                                     "time.dat"),
-                               tx,
-                               "auto",quiet = T)
+                 appDir <- system.file("shinyApp", "app", package = "TSNEVizTool")
+                 tx <- paste0(appDir,"/times/ev-")
+                 tx <- paste(tx,input$events,
+                             "__pm-",param[input$param],
+                             "__perpl-",perplex[input$perplexity],
+                             "__iter-",i,
+                             "__theta-",theta[input$theta],
+                             "time.dat")
                  load(tx)
                  
                  return(execTime/60)
@@ -74,15 +73,14 @@ server <- function(input, output, session)
          {
              times <- sapply(theta, function(i)
              {
-                 tx <- tempfile(fileext = ".dat")
-                 download.file(paste("http://simulworld.fr/temp/ev-",input$events,
-                                     "__pm-",param[input$param],
-                                     "__perpl-",perplex[input$perplexity],
-                                     "__iter-",iter[input$iterations],
-                                     "__theta-",i,
-                                     "time.dat"),
-                               tx,
-                               "auto",quiet = T)
+                 appDir <- system.file("shinyApp", "app", package = "TSNEVizTool")
+                 tx <- paste0(appDir,"/times/ev-")
+                 tx <- paste(tx,input$events,
+                             "__pm-",param[input$param],
+                             "__perpl-",perplex[input$perplexity],
+                             "__iter-",iter[input$iterations],
+                             "__theta-",i,
+                             "time.dat")
                  load(tx)
                  
                  return(execTime/60)
@@ -103,15 +101,14 @@ server <- function(input, output, session)
          {
              times <- sapply(perplex, function(i)
              {
-                 tx <- tempfile(fileext = ".dat")
-                 download.file(paste("http://simulworld.fr/temp/ev-",input$events,
-                                     "__pm-",param[input$param],
-                                     "__perpl-",i,
-                                     "__iter-",iter[input$iterations],
-                                     "__theta-",theta[input$theta],
-                                     "time.dat"),
-                               tx,
-                               "auto",quiet = T)
+                 appDir <- system.file("shinyApp", "app", package = "TSNEVizTool")
+                 tx <- paste0(appDir,"/times/ev-")
+                 tx <- paste(tx,input$events,
+                             "__pm-",param[input$param],
+                             "__perpl-",i,
+                             "__iter-",iter[input$iterations],
+                             "__theta-",theta[input$theta],
+                             "time.dat")
                  load(tx)
                  
                  return(execTime/60)
