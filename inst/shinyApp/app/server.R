@@ -7,10 +7,10 @@ server <- function(input, output, session)
 {
      observeEvent(input$param,
      {
-         param <<- c(5,15,30)
-         iter <<- c(1000,2000,3000)
-         theta <<- c(0.2,0.5,0.6,0.8)
-         perplex <<- c(50,100,150,200)
+         param <- c(5,15,30)
+         iter <- c(1000,2000,3000)
+         theta <- c(0.2,0.5,0.6,0.8)
+         perplex <- c(50,100,150,200)
 
          output$timePlot <- renderPlot(
          {
@@ -36,10 +36,10 @@ server <- function(input, output, session)
 
      observeEvent(input$iterations,
      {
-         param <<- c(5,15,30)
-         iter <<- c(1000,2000,3000)
-         theta <<- c(0.2,0.5,0.6,0.8)
-         perplex <<- c(50,100,150,200)
+         param <- c(5,15,30)
+         iter <- c(1000,2000,3000)
+         theta <- c(0.2,0.5,0.6,0.8)
+         perplex <- c(50,100,150,200)
 
          output$timePlot <- renderPlot(
          {
@@ -64,10 +64,10 @@ server <- function(input, output, session)
 
      observeEvent(input$theta,
      {
-         param <<- c(5,15,30)
-         iter <<- c(1000,2000,3000)
-         theta <<- c(0.2,0.5,0.6,0.8)
-         perplex <<- c(50,100,150,200)
+         param <- c(5,15,30)
+         iter <- c(1000,2000,3000)
+         theta <- c(0.2,0.5,0.6,0.8)
+         perplex <- c(50,100,150,200)
 
          output$timePlot <- renderPlot(
          {
@@ -92,10 +92,10 @@ server <- function(input, output, session)
 
      observeEvent(input$perplexity,
      {
-         param <<- c(5,15,30)
-         iter <<- c(1000,2000,3000)
-         theta <<- c(0.2,0.5,0.6,0.8)
-         perplex <<- c(50,100,150,200)
+         param <- c(5,15,30)
+         iter <- c(1000,2000,3000)
+         theta <- c(0.2,0.5,0.6,0.8)
+         perplex <- c(50,100,150,200)
 
          output$timePlot <- renderPlot(
          {
@@ -120,10 +120,10 @@ server <- function(input, output, session)
 
      observeEvent(input$events,
      {
-         param <<- c(5,15,30)
-         iter <<- c(1000,2000,3000)
-         theta <<- c(0.2,0.5,0.6,0.8)
-         perplex <<- c(50,100,150,200)
+         param <- c(5,15,30)
+         iter <- c(1000,2000,3000)
+         theta <- c(0.2,0.5,0.6,0.8)
+         perplex <- c(50,100,150,200)
          updateSliderInput(session, "param", "Markers:", min = 1, max = 3, value = 1)
          updateSliderInput(session, "theta", "Theta", min = 1, max = 4, value = 1)
          updateSliderInput(session, "iterations", "Iterations:", min = 1, max = 3, value = 1)
