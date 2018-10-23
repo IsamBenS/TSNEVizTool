@@ -12,7 +12,9 @@ Benchmark tool used to visualize the results of different runs of the Rtsne func
 ```
 install.packages(c("shiny", "shinydashboard", "gtools", "devtools"))
 source("https://bioconductor.org/biocLite.R")
-biocLite("Biobase", "flowCore", "ggcyto")
+biocLite("Biobase")
+biocLite("flowCore")
+biocLite("ggcyto")
 ```
   >You may be asked to reload your environment, if so, accept.
   
