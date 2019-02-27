@@ -136,7 +136,7 @@ server <- function(input, output, session)
                                                  "__perpl-",perplex[input$perplexity],
                                                  "__iter-",iter[input$iterations],
                                                  "__theta-",theta[input$theta],
-                                                 ".png")
+                                                 "tsne.png")
       										 
       		 tags$img(src=fname, width="100%")
       	 })
